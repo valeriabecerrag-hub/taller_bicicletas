@@ -1,4 +1,4 @@
-package co.edu.uniquindio.parcia2.tallerbicicletas;
+package co.edu.uniquindio.parcia2.tallerbicicletas.app;
 
 import javafx.application.Application;
 

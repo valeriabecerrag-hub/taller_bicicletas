@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                co.edu.uniquindio.parcia2.tallerbicicletas/co.edu.uniquindio.parcia2.tallerbicicletas.MainApp
+                                co.edu.uniquindio.parcia2.tallerbicicletas/co.edu.uniquindio.parcia2.tallerbicicletas.app.MainApp
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

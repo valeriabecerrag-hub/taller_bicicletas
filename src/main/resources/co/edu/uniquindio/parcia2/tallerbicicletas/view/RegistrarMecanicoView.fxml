@@ -5,21 +5,19 @@
 <?import javafx.scene.layout.*?>
 
 <BorderPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="co.edu.uniquindio.parcia2.tallerbicicletas.controller.ClienteControlller"
+            fx:controller="co.edu.uniquindio.parcia2.tallerbicicletas.controller.MecanicoController"
             stylesheets="@styles/app.css">
 
-    <!-- Header -->
     <top>
         <HBox spacing="12" styleClass="header" BorderPane.alignment="CENTER_LEFT">
             <padding>
                 <Insets top="18" right="22" bottom="18" left="22"/>
             </padding>
-            <Label text="Clientes" styleClass="headerTitle"/>
-            <Label text="Registro de nuevo cliente" styleClass="headerSubtitle"/>
+            <Label text="Mecánicos" styleClass="headerTitle"/>
+            <Label text="Registro de mecánico" styleClass="headerSubtitle"/>
         </HBox>
     </top>
 
-    <!-- Content -->
     <center>
         <VBox spacing="16" styleClass="container" BorderPane.alignment="CENTER">
             <padding>
@@ -28,7 +26,7 @@
 
             <VBox spacing="6">
                 <Label text="Nombre completo" styleClass="fieldLabel"/>
-                <TextField fx:id="txtNombre" promptText="Ej: Juan Pérez" styleClass="textField"/>
+                <TextField fx:id="txtNombre" promptText="Ej: Carlos Ramírez" styleClass="textField"/>
             </VBox>
 
             <VBox spacing="6">
@@ -37,24 +35,25 @@
             </VBox>
 
             <VBox spacing="6">
-                <Label text="Dirección" styleClass="fieldLabel"/>
-                <TextField fx:id="txtDireccion" promptText="Ej: Cra 10 # 20-30" styleClass="textField"/>
-            </VBox>
-
-            <VBox spacing="6">
                 <Label text="Teléfono" styleClass="fieldLabel"/>
                 <TextField fx:id="txtTelefono" promptText="Ej: 3001234567" styleClass="textField"/>
             </VBox>
 
+            <VBox spacing="6">
+                <Label text="Especialidad" styleClass="fieldLabel"/>
+                <ComboBox fx:id="cbEspecialidad" promptText="Seleccione especialidad" styleClass="textField"/>
+            </VBox>
+
+            <VBox spacing="6">
+                <Label text="Código interno" styleClass="fieldLabel"/>
+                <TextField fx:id="codigoInterno" promptText="Ej: 1001" styleClass="textField"/>
+            </VBox>
+
+
+
             <HBox spacing="10" styleClass="actions">
-                <Button text="Registrar"
-                        onAction="#handleRegistrar"
-                        styleClass="btnPrimary"/>
-
-                <Button text="Limpiar"
-                        onAction="#handleLimpiar"
-                        styleClass="btnSecondary"/>
-
+                <Button text="Registrar" onAction="#handleRegistrar" styleClass="btnPrimary"/>
+                <Button text="Limpiar" onAction="#handleLimpiar" styleClass="btnSecondary"/>
                 <Button text="Volver" onAction="#volverDashboard" styleClass="btnSecondary"/>
             </HBox>
 

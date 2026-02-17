@@ -30,6 +30,8 @@
 
             <HBox spacing="14" alignment="CENTER">
                 <Button text="Crear cliente" onAction="#goCrearCliente" styleClass="btnPrimary"/>
+                <Button text="Registrar bicicleta" onAction="#goRegistrarBicicleta" styleClass="btnPrimary"/>
+                <Button text="Registrar mecánico" onAction="#goRegistrarMecanico" styleClass="btnPrimary"/>
                 <Button text="Salir" onAction="#salir" styleClass="btnSecondary"/>
             </HBox>
         </VBox>

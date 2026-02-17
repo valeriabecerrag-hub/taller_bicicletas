@@ -2,6 +2,7 @@ package co.edu.uniquindio.parcia2.tallerbicicletas.model;
 
 import co.edu.uniquindio.parcia2.tallerbicicletas.helpers.Helpers;
 import co.edu.uniquindio.parcia2.tallerbicicletas.model.enums.EspecialidadMecanico;
+import co.edu.uniquindio.parcia2.tallerbicicletas.model.enums.TipoBicicleta;
 
 import java.util.ArrayList;
 
@@ -15,6 +16,11 @@ public class Taller {
     private Helpers helpers;
 
     public Taller() {
+        helpers = new Helpers();
+        clientes = new ArrayList<>();
+        mecanicos = new ArrayList<>();
+        bicicletas = new ArrayList<>();
+        ordenes = new ArrayList<>();
     }
 
     public Taller(String nombre, String direccion) {
@@ -85,9 +91,9 @@ public class Taller {
         }
     }
 
-    public boolean registrarMecanico(String nombre, String numIdentificacion, String direccion, int telefono){
+    public boolean registrarMecanico(EspecialidadMecanico especialidadMecanico, int codigoInterno, String nombre, String numIdentificacion  ){
         if(helpers.validarExistenciaMecanico(mecanicos, numIdentificacion)){
-            Mecanico mecanico = new Mecanico(nombre, numIdentificacion, direccion, telefono);
+            Mecanico mecanico = new Mecanico(especialidadMecanico, codigoInterno, nombre, numIdentificacion);
             mecanicos.add(mecanico);
             return true;
         }else{
@@ -95,8 +101,13 @@ public class Taller {
         }
     }
 
-    public boolean registrarBicicleta(){
-        return true;
+    public boolean registrarBicicleta(Cliente cliente, String marca, TipoBicicleta tipo, String color, String serial, int anio){
+        if(helpers.validarExistenciaBicicleta(bicicletas, serial)){
+            Bicicleta bicicleta = new Bicicleta(marca, tipo, color, serial, anio, cliente);
+            bicicletas.add(bicicleta);
+            return true;
+        }
+        return false;
     }
 
 

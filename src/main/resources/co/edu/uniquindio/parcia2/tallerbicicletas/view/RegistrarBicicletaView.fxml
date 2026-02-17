@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="co.edu.uniquindio.parcia2.tallerbicicletas.controller.BicicletaController"
+            stylesheets="@styles/app.css">
+
+    <!-- Header -->
+    <top>
+        <HBox spacing="12" styleClass="header" BorderPane.alignment="CENTER_LEFT">
+            <padding>
+                <Insets top="18" right="22" bottom="18" left="22"/>
+            </padding>
+            <Label text="Bicicletas" styleClass="headerTitle"/>
+            <Label text="Registro de bicicleta" styleClass="headerSubtitle"/>
+        </HBox>
+    </top>
+
+    <!-- Content -->
+    <center>
+        <VBox spacing="16" styleClass="container" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="22" right="22" bottom="22" left="22"/>
+            </padding>
+
+            <!-- Cliente -->
+            <VBox spacing="6">
+                <Label text="Cliente" styleClass="fieldLabel"/>
+                <ComboBox fx:id="cbClientes" promptText="Seleccione un cliente" styleClass="textField"/>
+            </VBox>
+
+            <!-- Marca -->
+            <VBox spacing="6">
+                <Label text="Marca" styleClass="fieldLabel"/>
+                <TextField fx:id="txtMarca" promptText="Ej: GW, Trek, Specialized" styleClass="textField"/>
+            </VBox>
+
+            <!-- Tipo -->
+            <VBox spacing="6">
+                <Label text="Tipo de bicicleta" styleClass="fieldLabel"/>
+                <ComboBox fx:id="cbTipo" promptText="Seleccione el tipo" styleClass="textField"/>
+            </VBox>
+
+            <!-- Color -->
+            <VBox spacing="6">
+                <Label text="Color" styleClass="fieldLabel"/>
+                <TextField fx:id="txtColor" promptText="Ej: Negro, Rojo, Azul" styleClass="textField"/>
+            </VBox>
+
+            <!-- Serial -->
+            <VBox spacing="6">
+                <Label text="Serial" styleClass="fieldLabel"/>
+                <TextField fx:id="txtSerial" promptText="Ej: SN-00123" styleClass="textField"/>
+            </VBox>
+
+            <!-- Año -->
+            <VBox spacing="6">
+                <Label text="Año" styleClass="fieldLabel"/>
+                <TextField fx:id="txtAnio" promptText="Ej: 2022" styleClass="textField"/>
+            </VBox>
+
+            <HBox spacing="10" styleClass="actions">
+                <Button text="Registrar" onAction="#handleRegistrar" styleClass="btnPrimary"/>
+                <Button text="Limpiar" onAction="#handleLimpiar" styleClass="btnSecondary"/>
+                <Button text="Volver" onAction="#volverDashboard" styleClass="btnSecondary"/>
+            </HBox>
+
+            <Label fx:id="lblMensaje" styleClass="message"/>
+        </VBox>
+    </center>
+
+</BorderPane>

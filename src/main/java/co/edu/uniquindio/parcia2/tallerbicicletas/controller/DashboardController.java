@@ -1,30 +1,51 @@
 package co.edu.uniquindio.parcia2.tallerbicicletas.controller;
 
-import co.edu.uniquindio.parcia2.tallerbicicletas.MainApp;
+import co.edu.uniquindio.parcia2.tallerbicicletas.app.MainApp;
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class DashboardController {
 
-    @FXML private Label lblTitulo;
+    @FXML
+    private void goCrearCliente(ActionEvent event) {
+        cambiarVista(event,
+                "/co/edu/uniquindio/parcia2/tallerbicicletas/view/CrearClienteView.fxml",
+                "Clientes - Registro",
+                800, 560
+        );
+    }
 
     @FXML
-    private void goCrearCliente() {
+    private void goRegistrarBicicleta(ActionEvent event) {
+        cambiarVista(event,
+                "/co/edu/uniquindio/parcia2/tallerbicicletas/view/RegistrarBicicletaView.fxml",
+                "Bicicletas - Registro",
+                820, 600
+        );
+    }
+
+    @FXML
+    private void goRegistrarMecanico(ActionEvent event) {
+        cambiarVista(event,
+                "/co/edu/uniquindio/parcia2/tallerbicicletas/view/RegistrarMecanicoView.fxml",
+                "Mecánicos - Registro",
+                800, 560
+        );
+    }
+
+    private void cambiarVista(ActionEvent event, String fxml, String title, int w, int h) {
         try {
-            FXMLLoader loader = new FXMLLoader(
-                    MainApp.class.getResource("/co/edu/uniquindio/parcia2/tallerbicicletas/view/CrearClienteView.fxml")
-            );
+            FXMLLoader loader = new FXMLLoader(MainApp.class.getResource(fxml));
+            Scene scene = new Scene(loader.load(), w, h);
 
-            Scene scene = new Scene(loader.load(), 800, 560);
-
-            Stage stage = (Stage) lblTitulo.getScene().getWindow();
-            stage.setTitle("Clientes - Registro");
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle(title);
             stage.setScene(scene);
-
         } catch (Exception e) {
             e.printStackTrace();
         }

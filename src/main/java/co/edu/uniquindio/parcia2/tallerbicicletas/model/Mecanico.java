@@ -6,7 +6,7 @@ public class Mecanico extends Persona{
     private EspecialidadMecanico especialidadMecanico;
     private int codigoInterno;
 
-    public Mecanico(String nombre, String numIdentificacion, String direccion, int telefono) {
+    public Mecanico() {
     }
 
     public Mecanico(EspecialidadMecanico especialidadMecanico, int codigoInterno, String nombre,

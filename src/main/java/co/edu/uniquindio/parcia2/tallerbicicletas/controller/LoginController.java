@@ -1,6 +1,6 @@
 package co.edu.uniquindio.parcia2.tallerbicicletas.controller;
 
-import co.edu.uniquindio.parcia2.tallerbicicletas.MainApp;
+import co.edu.uniquindio.parcia2.tallerbicicletas.app.MainApp;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
