@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="co.edu.uniquindio.parcia2.tallerbicicletas.controller.LoginController">
+
+    <center>
+        <VBox spacing="14" alignment="CENTER">
+            <padding>
+                <Insets top="30" right="40" bottom="30" left="40"/>
+            </padding>
+
+            <Label text="Taller de Bicicletas"
+                   style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+            <Label text="Iniciar sesión" style="-fx-font-size: 16px;" />
+
+            <GridPane hgap="10" vgap="12">
+                <Label text="Usuario:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtUsuario"
+                           promptText="usuario"
+                           GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Contraseña:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <PasswordField fx:id="txtPassword"
+                               promptText="********"
+                               GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            </GridPane>
+
+            <Button text="Ingresar"
+                    fx:id="btnIngresar"
+                    onAction="#handleLogin"
+                    style="-fx-background-color: #2E8B57; -fx-text-fill: white;"/>
+
+            <Label fx:id="lblMensaje" style="-fx-font-weight: bold;"/>
+        </VBox>
+    </center>
+
+</BorderPane>

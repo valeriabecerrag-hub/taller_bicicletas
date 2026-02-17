@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="co.edu.uniquindio.parcia2.tallerbicicletas.controller.ClienteControlller"
+            stylesheets="@styles/app.css">
+
+    <!-- Header -->
+    <top>
+        <HBox spacing="12" styleClass="header" BorderPane.alignment="CENTER_LEFT">
+            <padding>
+                <Insets top="18" right="22" bottom="18" left="22"/>
+            </padding>
+            <Label text="Clientes" styleClass="headerTitle"/>
+            <Label text="Registro de nuevo cliente" styleClass="headerSubtitle"/>
+        </HBox>
+    </top>
+
+    <!-- Content -->
+    <center>
+        <VBox spacing="16" styleClass="container" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="22" right="22" bottom="22" left="22"/>
+            </padding>
+
+            <VBox spacing="6">
+                <Label text="Nombre completo" styleClass="fieldLabel"/>
+                <TextField fx:id="txtNombre" promptText="Ej: Juan Pérez" styleClass="textField"/>
+            </VBox>
+
+            <VBox spacing="6">
+                <Label text="Identificación" styleClass="fieldLabel"/>
+                <TextField fx:id="txtIdentificacion" promptText="Ej: 123456789" styleClass="textField"/>
+            </VBox>
+
+            <VBox spacing="6">
+                <Label text="Dirección" styleClass="fieldLabel"/>
+                <TextField fx:id="txtDireccion" promptText="Ej: Cra 10 # 20-30" styleClass="textField"/>
+            </VBox>
+
+            <VBox spacing="6">
+                <Label text="Teléfono" styleClass="fieldLabel"/>
+                <TextField fx:id="txtTelefono" promptText="Ej: 3001234567" styleClass="textField"/>
+            </VBox>
+
+            <HBox spacing="10" styleClass="actions">
+                <Button text="Registrar"
+                        onAction="#handleRegistrar"
+                        styleClass="btnPrimary"/>
+
+                <Button text="Limpiar"
+                        onAction="#handleLimpiar"
+                        styleClass="btnSecondary"/>
+            </HBox>
+
+            <Label fx:id="lblMensaje" styleClass="message"/>
+        </VBox>
+    </center>
+
+</BorderPane>

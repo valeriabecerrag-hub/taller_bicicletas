@@ -1,0 +1,77 @@
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: #f6f7fb;
+}
+
+.header {
+    -fx-background-color: white;
+    -fx-border-color: #e7e9f0;
+    -fx-border-width: 0 0 1 0;
+}
+
+.headerTitle {
+    -fx-font-size: 18px;
+    -fx-font-weight: 700;
+}
+
+.headerSubtitle {
+    -fx-text-fill: #6b7280;
+    -fx-font-size: 13px;
+}
+
+.container {
+    -fx-background-color: white;
+    -fx-background-radius: 14px;
+    -fx-border-radius: 14px;
+    -fx-border-color: #e7e9f0;
+    -fx-border-width: 1;
+    -fx-max-width: 520px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.07), 14, 0.2, 0, 3);
+}
+
+.fieldLabel {
+    -fx-font-size: 12px;
+    -fx-text-fill: #374151;
+    -fx-font-weight: 600;
+}
+
+.textField {
+    -fx-background-color: #f9fafb;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #e5e7eb;
+    -fx-padding: 10 12 10 12;
+}
+
+.textField:focused {
+    -fx-border-color: #2563eb;
+    -fx-background-color: white;
+}
+
+.actions {
+    -fx-padding: 6 0 0 0;
+}
+
+.btnPrimary {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-background-radius: 10px;
+    -fx-padding: 10 16 10 16;
+    -fx-font-weight: 700;
+}
+
+.btnPrimary:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+.btnSecondary {
+    -fx-background-color: #eef2ff;
+    -fx-text-fill: #1e3a8a;
+    -fx-background-radius: 10px;
+    -fx-padding: 10 16 10 16;
+    -fx-font-weight: 700;
+}
+
+.message {
+    -fx-font-weight: 700;
+}
